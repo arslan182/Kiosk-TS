@@ -6,3 +6,11 @@ E → Eve
 F → Frank
 G → Grace
 H → Hank
+I → Ivy
+J → Jack
+K → Kate
+L → Leo
+M → Mia
+N → Nick
+O → Oscar
+P → Paul
