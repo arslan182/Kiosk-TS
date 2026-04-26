@@ -1,0 +1,79 @@
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#generator
+generator client {
+  /// Default ab Prisma 6.18
+  provider        = "prisma-client"
+  output          = "../src/generated/prisma"
+  /// https://www.prisma.io/docs/orm/reference/preview-features/client-preview-features#currently-active-preview-features
+  previewFeatures = ["nativeDistinct", "relationJoins", "multiSchema"]
+  engineType      = "client"
+}
+
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#datasource
+datasource db {
+  provider = "postgresql"
+  schemas  = ["kiosk"]
+}
+
+// -----------------------------------------------------------------------------
+// M o d e l s
+// -----------------------------------------------------------------------------
+
+model Betreiber {
+  id         Int         @id @default(autoincrement())
+  vorname    String
+  nachname   String
+  geschlecht Geschlecht?
+  kioskId    Int         @map("kiosk_id")
+  kiosk      Kiosk       @relation(fields: [kioskId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([kioskId])
+  @@index([nachname])
+  @@index([vorname])
+  @@map("betreiber") // Verknüpft das Model mit der kleingeschriebenen Tabelle in DB
+  @@schema("kiosk")  // Ordnet das Model dem Postgres-Schema zu
+}
+
+model Kiosk {
+  id           Int         @id @default(autoincrement())
+  version      Int         @default(0)
+  name         String
+  email        String      @unique
+  istGeoeffnet Boolean     @default(true) @map("ist_geoeffnet")
+  homepage     String?
+  username     String
+  erzeugt      DateTime    @db.Timestamp(6)
+  aktualisiert DateTime    @db.Timestamp(6)
+  betreiber    Betreiber[]
+  produkt      Produkt[]
+
+  @@index([name])
+  @@map("kiosk")
+  @@schema("kiosk")
+}
+
+model Produkt {
+  id       Int     @id @default(autoincrement())
+  name     String
+  preis    Decimal @db.Decimal(10, 2)
+  waehrung String
+  kioskId  Int     @map("kiosk_id")
+  kiosk    Kiosk   @relation(fields: [kioskId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([kioskId])
+  @@map("produkt")
+  @@schema("kiosk")
+}
+
+// -----------------------------------------------------------------------------
+// E n u m s
+// -----------------------------------------------------------------------------
+
+enum Geschlecht {
+  MAENNLICH
+  WEIBLICH
+  DIVERS
+
+  @@map("geschlecht")
+  @@schema("kiosk")
+}
