@@ -1,0 +1,8 @@
+A → Alice
+B → Bob
+C → Charlie
+D → Diana
+E → Eve
+F → Frank
+G → Grace
+H → Hank
