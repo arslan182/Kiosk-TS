@@ -14,3 +14,13 @@ M → Mia
 N → Nick
 O → Oscar
 P → Paul
+Q → Quinn
+R → Rose
+S → Sam
+T → Tom
+U → Uma
+V → Victor
+W → Wendy
+X → Xander
+Y → Yara
+Z → Zoe
