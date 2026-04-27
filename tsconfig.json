@@ -48,3 +48,4 @@
     // "useUnknownInCatchVariables": true // unknown als default-Typ bei catch-Klauseln, default bei strict
   }
 }
+
