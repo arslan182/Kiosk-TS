@@ -94,3 +94,4 @@ beispiele.js.map
 ReadMe.prisma.md
 .vscode/settings.json
 ReadMe.vscode.md
+src/config/resources/postgresql/server.crt
