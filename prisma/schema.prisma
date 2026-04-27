@@ -1,24 +1,17 @@
-/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference
-/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#generator
+/// https://www.prisma.io/docs/orm/reference/preview-features/client-preview-features#currently-active-preview-features
 generator client {
-  /// Default ab Prisma 6.18
   provider        = "prisma-client"
   output          = "../src/generated/prisma"
-  /// https://www.prisma.io/docs/orm/reference/preview-features/client-preview-features#currently-active-preview-features
-  previewFeatures = ["nativeDistinct", "relationJoins", "multiSchema"]
+  previewFeatures = ["multiSchema", "nativeDistinct", "relationJoins"]
   engineType      = "client"
 }
 
-/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#datasource
 datasource db {
   provider = "postgresql"
   schemas  = ["kiosk"]
 }
 
-// -----------------------------------------------------------------------------
-// M o d e l s
-// -----------------------------------------------------------------------------
-
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#datasource
 model Betreiber {
   id         Int         @id @default(autoincrement())
   vorname    String
@@ -30,8 +23,8 @@ model Betreiber {
   @@index([kioskId])
   @@index([nachname])
   @@index([vorname])
-  @@map("betreiber") // Verknüpft das Model mit der kleingeschriebenen Tabelle in DB
-  @@schema("kiosk")  // Ordnet das Model dem Postgres-Schema zu
+  @@map("betreiber")
+  @@schema("kiosk")
 }
 
 model Kiosk {
@@ -64,10 +57,6 @@ model Produkt {
   @@map("produkt")
   @@schema("kiosk")
 }
-
-// -----------------------------------------------------------------------------
-// E n u m s
-// -----------------------------------------------------------------------------
 
 enum Geschlecht {
   MAENNLICH
