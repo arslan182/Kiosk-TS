@@ -57,7 +57,7 @@ export default defineConfig(
             stylistic.configs.recommended,
         ],
 
-        
+
         plugins: {
             'no-secrets': noSecrets,
         },
