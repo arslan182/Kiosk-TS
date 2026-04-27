@@ -95,3 +95,5 @@ ReadMe.prisma.md
 .vscode/settings.json
 ReadMe.vscode.md
 src/config/resources/postgresql/server.crt
+extras/compose/postgres/ReadMe.md
+bun.lock
