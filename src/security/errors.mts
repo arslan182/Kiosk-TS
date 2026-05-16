@@ -1,3 +1,4 @@
+// oxlint-disable max-classes-per-file
 // Copyright (C) 2026 - present Juergen Zimmermann, Hochschule Karlsruhe
 //
 // This program is free software: you can redistribute it and/or modify
@@ -13,20 +14,17 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-import Bun from 'bun';
-import { Hono } from 'hono';
+/**
+ * Error-Klasse für fehlende Authorisierung.
+ */
+export class UnauthorizedError extends Error {}
 
 /**
- * Web-Applikation mit Hono.
- * @author [Sam Haghighi](mailto:hasa1034@h-ka.de)
+ * Error-Klasse für fehlende Berechtigung.
  */
-export const app = new Hono();
+export class ForbiddenError extends Error {}
 
-app.get('/', (c) => c.json({ msg: 'Hello World' }));
-
-// fetch: Request-Handler fuer den Bun-Server mit Signatur gemaess Fetch-API von ES2015
-// d.h. eine Funktion, die einen Request empfaengt und einen Response produziert:
-// async function handler(req: Request): Promise<Response> { ... }
-Bun.serve({ port: 3000, fetch: app.fetch });
-
-console.log('Der Server http://localhost:3000 ist gestartet');
+/**
+ * Error-Klasse für internen Fehler.
+ */
+export class InternalServerError extends Error {}
