@@ -1,0 +1,66 @@
+' Copyright (C) 2019 - present Juergen Zimmermann, Hochschule Karlsruhe
+'
+' This program is free software: you can redistribute it and/or modify
+' it under the terms of the GNU General Public License as published by
+' the Free Software Foundation, either version 3 of the License, or
+' (at your option) any later version.
+'
+' This program is distributed in the hope that it will be useful,
+' but WITHOUT ANY WARRANTY; without even the implied warranty of
+' MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+' GNU General Public License for more details.
+'
+' You should have received a copy of the GNU General Public License
+' along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+' Preview durch <Alt>d
+
+@startuml Anwendungskern
+
+interface Promise<T>
+interface Readonly<T> <<type>>
+
+package generated.prisma {
+  class Prisma
+  note right: + bedeutet innere Klasse
+
+  class KioskGetPayload<T>
+  Prisma +-- KioskGetPayload
+}
+
+package config {
+    object prismaClient <<singleton>>
+}
+
+package kiosk {
+  package service #DDDDDD {
+    exception NotFoundError
+
+    object buildWhere <<singleton>>
+    class Slice
+
+    class KioskService << control >> {
+      + async findById(id: number): Promise<Readonly<KioskGetPayload<>>>
+      + async find(suchparameter?: Record<string, any>): Promise<Readonly<Slice<KioskGetPayload>>>
+    }
+
+    KioskService ..> buildWhere
+
+    KioskService .up.> NotFoundError
+
+    KioskService .up.> Promise
+    KioskService .up.> Readonly
+    KioskService ..> KioskGetPayload
+    KioskService ..> Slice
+
+    KioskService ..> prismaClient
+
+    Promise .[hidden]right.> Readonly
+  }
+}
+
+hide empty members
+
+footer (c) Sam Haghighi
+
+@enduml
