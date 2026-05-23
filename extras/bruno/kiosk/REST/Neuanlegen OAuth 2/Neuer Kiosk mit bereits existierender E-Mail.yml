@@ -1,0 +1,44 @@
+info:
+  name: Neuer Kiosk mit bereits existierender E-Mail
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{restUrl}}"
+  headers:
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Kiosk Doublette",
+        "email": "hbf@kiosk-welt.de",
+        "istGeoeffnet": true,
+        "homepage": "https://doublette.kiosk-welt.de",
+        "username": "kiosk_doublette"
+      }
+  auth: inherit
+
+runtime:
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "422"
+    - expression: res.headers['content-type']
+      operator: eq
+      value: application/problem+json
+    - expression: res.body.statusCode
+      operator: eq
+      value: "422"
+    - expression: res.body.detail
+      operator: contains
+      value: E-Mail
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,37 @@
+info:
+  name: Neuer Kiosk ohne Token
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{restUrl}}"
+  headers:
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Hauptbahnhof Kiosk",
+        "email": "hbf@kiosk-welt.de",
+        "istGeoeffnet": true,
+        "homepage": "https://hbf.kiosk-welt.de",
+        "username": "kiosk_hbf_user"
+      }
+
+runtime:
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "401"
+    - expression: res.headers['content-type']
+      operator: eq
+      value: application/problem+json
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

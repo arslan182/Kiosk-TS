@@ -1,0 +1,42 @@
+info:
+  name: Neuer Kiosk
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{restUrl}}"
+  headers:
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Hauptbahnhof Kiosk",
+        "email": "hbf@kiosk-welt.de",
+        "istGeoeffnet": true,
+        "homepage": "https://hbf.kiosk-welt.de",
+        "username": "kiosk_hbf_user"
+      }
+  auth: inherit
+
+runtime:
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "201"
+    - expression: res.headers.location
+      operator: matches
+      value: \/.+\/[1-9]\d*$
+    - expression: res.body
+      operator: isString
+    - expression: res.body
+      operator: isEmpty
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
