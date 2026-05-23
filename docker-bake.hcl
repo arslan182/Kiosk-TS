@@ -40,3 +40,4 @@ target "alpine" {
   tags = ["docker.io/juergenzimmermann/kiosk:2026.4.1-alpine"]
   dockerfile = "Dockerfile.alpine"
 }
+
