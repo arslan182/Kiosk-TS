@@ -1,0 +1,42 @@
+info:
+  name: Neuer Kiosk als user
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{restUrl}}"
+  headers:
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Südstadt Kiosk",
+        "email": "suedstadt@kiosk-welt.de",
+        "istGeoeffnet": true,
+        "homepage": "https://suedstadt.kiosk-welt.de",
+        "username": "kiosk_user_sued"
+      }
+  auth: inherit
+
+runtime:
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "201"
+    - expression: res.headers.location
+      operator: matches
+      value: \/.+\/[1-9]\d*$
+    - expression: res.body
+      operator: isString
+    - expression: res.body
+      operator: isEmpty
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
