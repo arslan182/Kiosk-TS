@@ -123,7 +123,8 @@ app.onError((error, c) => {
         );
     }
 
-    if (error instanceof EmailExistsError) { // ANGEPASST
+    if (error instanceof EmailExistsError) {
+        // ANGEPASST
         return createProblemDetails(c, unprocessableContent, error.message);
     }
 

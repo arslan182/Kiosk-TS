@@ -238,7 +238,8 @@ export class KioskService {
         // Ist jeder Suchparameter auch eine Property von Kiosk?
         let validKeys = true;
         keys.forEach((key) => {
-            if (!suchparameterNamen.includes(key) &&
+            if (
+                !suchparameterNamen.includes(key) &&
                 key !== 'javascript' &&
                 key !== 'typescript' &&
                 key !== 'java' &&
