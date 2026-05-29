@@ -52,7 +52,7 @@ export type KioskMitBetreiberUndProdukt = Prisma.KioskGetPayload<{
 }>;
 
 // "preis" ist vom Prisma-internen Typ "Decimal"
-export type KioskMitBetreiberUndProduktDTO = Omit
+export type KioskMitBetreiberUndProduktDTO = Omit<
     KioskMitBetreiberUndProdukt,
     'produkt'
 > & {
