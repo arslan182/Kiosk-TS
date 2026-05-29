@@ -813,3 +813,583 @@
 {"level":20,"time":1780065118495,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
 {"level":20,"time":1780065121492,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
 {"level":20,"time":1780065121493,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065124499,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065124506,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 7 ms, 200"}
+{"level":20,"time":1780065127511,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065127516,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 5 ms, 200"}
+{"level":20,"time":1780065130506,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065130508,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065133492,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065133493,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065136498,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065136500,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065139501,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065139503,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065142490,"pid":9944,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065142491,"pid":9944,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065182758,"pid":17656,"hostname":"SamHKA","file":"config/mail","msg":"mailConfig = {\"activated\":true,\"options\":{\"host\":\"localhost\",\"port\":1025,\"secure\":false,\"priority\":\"normal\",\"logger\":false},\"from\":\"\\\"Joe Doe\\\" <Joe.Doe@acme.com>\",\"to\":\"\\\"Foo Bar\\\" <Foo.Bar@acme.com>\"}"}
+{"level":20,"time":1780065182759,"pid":17656,"hostname":"SamHKA","file":"config/keycloak","msg":"keycloakConfig = {\"realm\":\"javascript\",\"issuer\":\"https://localhost:8843/realms/javascript\",\"jwksUri\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/certs\",\"clientId\":\"javascript-client\",\"audience\":[\"account\"],\"accessTokenUrl\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\"}"}
+{"level":20,"time":1780065182780,"pid":17656,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780065182780,"pid":17656,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780065182780,"pid":17656,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780065182787,"pid":17656,"hostname":"SamHKA","class":"DbPopulateService","msg":"dropScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/drop-table.sql"}
+{"level":20,"time":1780065182788,"pid":17656,"hostname":"SamHKA","class":"DbPopulateService","msg":"createScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/create-table.sql"}
+{"level":20,"time":1780065182788,"pid":17656,"hostname":"SamHKA","class":"DbPopulateService","msg":"copyScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/copy-csv.sql"}
+{"level":30,"time":1780065182996,"pid":17656,"hostname":"SamHKA","file":"prisma-client","msg":"Verbindung mit der DB ist hergestellt."}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Bun: 1.3.13"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Bun / Node: v24.3.0"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"NODE_ENV: undefined"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Rechnername: SamHKA"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Port: 3000"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"HTTP-Port: 3030"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Betriebssystem: Windows_NT (10.0.26200)"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Username: samha"}
+{"level":30,"time":1780065183025,"pid":17656,"hostname":"SamHKA","func":"banner","msg":"Docker Container: false"}
+{"level":20,"time":1780065184510,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065184515,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 5 ms, 200"}
+{"level":20,"time":1780065187492,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065187495,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065190491,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065190492,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065193486,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065193488,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065196483,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065196485,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065199483,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065199484,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065202484,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065202486,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065205498,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065205504,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 6 ms, 200"}
+{"level":20,"time":1780065208486,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065208488,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065208735,"pid":25740,"hostname":"SamHKA","file":"config/mail","msg":"mailConfig = {\"activated\":true,\"options\":{\"host\":\"localhost\",\"port\":1025,\"secure\":false,\"priority\":\"normal\",\"logger\":false},\"from\":\"\\\"Joe Doe\\\" <Joe.Doe@acme.com>\",\"to\":\"\\\"Foo Bar\\\" <Foo.Bar@acme.com>\"}"}
+{"level":20,"time":1780065208743,"pid":25740,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780065208743,"pid":25740,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780065208743,"pid":25740,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780065211498,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065211502,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065214480,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065214481,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065215086,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=POST, url=https://samhka:3000/auth/token"}
+{"level":20,"time":1780065215087,"pid":17656,"hostname":"SamHKA","file":"auth-router","msg":"post: username=admin"}
+{"level":20,"time":1780065215087,"pid":17656,"hostname":"SamHKA","class":"KeycloakService","msg":"token: username=admin"}
+{"level":20,"time":1780065215087,"pid":17656,"hostname":"SamHKA","class":"KeycloakService","msg":"token: path=https://localhost:8843/realms/javascript/protocol/openid-connect/token"}
+{"level":20,"time":1780065215087,"pid":17656,"hostname":"SamHKA","class":"KeycloakService","msg":"token: headers={\"content-type\":\"application/x-www-form-urlencoded\"}"}
+{"level":20,"time":1780065215088,"pid":17656,"hostname":"SamHKA","class":"KeycloakService","msg":"token: body=username=admin&password=p&grant_type=password&client_id=javascript-client&client_secret=eVUYsaIew9mcK3WrFOpeeL85iCiXQSX0"}
+{"level":20,"time":1780065215033,"pid":20456,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780065215034,"pid":20456,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780065215034,"pid":20456,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":40,"time":1780065215569,"pid":17656,"hostname":"SamHKA","class":"KeycloakService","msg":"Fehler beim Zugriff auf Keycloak: {\"code\":\"DEPTH_ZERO_SELF_SIGNED_CERT\",\"path\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\",\"errno\":0}"}
+{"level":20,"time":1780065215569,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 483 ms, 401"}
+{"level":20,"time":1780065217482,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065217484,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065220478,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065220479,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065223481,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065223482,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065226485,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065226486,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065229485,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065229486,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065232501,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065232507,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 6 ms, 200"}
+{"level":20,"time":1780065235479,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065235481,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065238481,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065238482,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065241479,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065241480,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065244490,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065244492,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065247477,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065247478,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065250477,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065250481,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065253480,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065253481,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065256488,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065256491,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065259495,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065259499,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065262477,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065262478,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065265491,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065265495,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065268487,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065268489,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065271475,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065271477,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065274473,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065274474,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065277476,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065277477,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065280495,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065280500,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 5 ms, 200"}
+{"level":20,"time":1780065283476,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065283478,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065286474,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065286475,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065289490,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065289492,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065292475,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065292476,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065295472,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065295473,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065298477,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065298478,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065301472,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065301473,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065304488,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065304490,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065307487,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065307495,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 8 ms, 200"}
+{"level":20,"time":1780065310477,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065310480,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065313472,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065313473,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065316485,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065316488,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065319481,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065319483,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065322472,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065322474,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065325484,"pid":17656,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065325487,"pid":17656,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065411675,"pid":6992,"hostname":"SamHKA","file":"config/mail","msg":"mailConfig = {\"activated\":true,\"options\":{\"host\":\"localhost\",\"port\":1025,\"secure\":false,\"priority\":\"normal\",\"logger\":false},\"from\":\"\\\"Joe Doe\\\" <Joe.Doe@acme.com>\",\"to\":\"\\\"Foo Bar\\\" <Foo.Bar@acme.com>\"}"}
+{"level":20,"time":1780065411676,"pid":6992,"hostname":"SamHKA","file":"config/keycloak","msg":"keycloakConfig = {\"realm\":\"javascript\",\"issuer\":\"https://localhost:8843/realms/javascript\",\"jwksUri\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/certs\",\"clientId\":\"javascript-client\",\"audience\":[\"account\"],\"accessTokenUrl\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\"}"}
+{"level":20,"time":1780065411698,"pid":6992,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780065411698,"pid":6992,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780065411698,"pid":6992,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780065411704,"pid":6992,"hostname":"SamHKA","class":"DbPopulateService","msg":"dropScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/drop-table.sql"}
+{"level":20,"time":1780065411705,"pid":6992,"hostname":"SamHKA","class":"DbPopulateService","msg":"createScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/create-table.sql"}
+{"level":20,"time":1780065411705,"pid":6992,"hostname":"SamHKA","class":"DbPopulateService","msg":"copyScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/copy-csv.sql"}
+{"level":30,"time":1780065411899,"pid":6992,"hostname":"SamHKA","file":"prisma-client","msg":"Verbindung mit der DB ist hergestellt."}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Bun: 1.3.13"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Bun / Node: v24.3.0"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"NODE_ENV: undefined"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Rechnername: SamHKA"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Port: 3000"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"HTTP-Port: 3030"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Betriebssystem: Windows_NT (10.0.26200)"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Username: samha"}
+{"level":30,"time":1780065411921,"pid":6992,"hostname":"SamHKA","func":"banner","msg":"Docker Container: false"}
+{"level":20,"time":1780065412486,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065412491,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065415469,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065415472,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065418461,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065418463,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065421463,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065421465,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065424459,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065424460,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065427472,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065427476,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065430455,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065430457,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065433459,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065433462,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065436458,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065436459,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065439457,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065439459,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065442474,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065442478,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065445462,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065445463,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065448470,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065448472,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065451457,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065451459,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065454455,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065454456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065457455,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065457456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065460451,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065460453,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065463465,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065463471,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 6 ms, 200"}
+{"level":20,"time":1780065466469,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065466471,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065469464,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065469466,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065472473,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065472474,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065475453,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065475454,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065478497,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065478530,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 33 ms, 200"}
+{"level":20,"time":1780065481452,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065481453,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065484464,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065484466,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065487451,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065487452,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065490452,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065490453,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065493452,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065493453,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065496455,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065496456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065499464,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065499466,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065502464,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065502466,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065505461,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065505462,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065508462,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065508463,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065511454,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065511456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065514448,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065514450,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065516483,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://localhost:3000/swagger"}
+{"level":20,"time":1780065516483,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 0 ms, 404"}
+{"level":20,"time":1780065516660,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://localhost:3000/favicon.ico"}
+{"level":20,"time":1780065516660,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 0 ms, 404"}
+{"level":20,"time":1780065517449,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065517451,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065520449,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065520451,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065523464,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065523466,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065526446,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065526447,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065529447,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065529449,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065532467,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065532471,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065535460,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065535465,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 6 ms, 200"}
+{"level":20,"time":1780065538453,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065538455,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065541446,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065541447,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065544459,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065544461,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065547460,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065547464,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065550446,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065550448,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065553448,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065553450,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065556454,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065556455,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065559450,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065559453,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065562458,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065562461,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065565459,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065565462,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065568455,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065568456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065571444,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065571447,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065574444,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065574445,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065577441,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065577442,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065580440,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065580441,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065583456,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065583461,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065586440,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065586441,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065589452,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065589455,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065592442,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065592445,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065595435,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065595435,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 0 ms, 200"}
+{"level":20,"time":1780065598447,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065598449,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065601439,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065601441,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065604447,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065604449,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065607438,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065607440,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065610438,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065610439,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065613452,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065613456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065616437,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065616441,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065619445,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065619448,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065622452,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065622456,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065625446,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065625448,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065628451,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065628454,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065631449,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065631451,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065634445,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065634447,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065637433,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065637435,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065640444,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065640446,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065643441,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065643443,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065646448,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065646451,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065649433,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065649434,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065652430,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065652432,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065655436,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065655438,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065658438,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065658441,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065661438,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065661440,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065664427,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065664428,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065667427,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065667428,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065670428,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065670429,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065673428,"pid":6992,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065673430,"pid":6992,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065721019,"pid":1712,"hostname":"SamHKA","file":"config/mail","msg":"mailConfig = {\"activated\":true,\"options\":{\"host\":\"localhost\",\"port\":1025,\"secure\":false,\"priority\":\"normal\",\"logger\":false},\"from\":\"\\\"Joe Doe\\\" <Joe.Doe@acme.com>\",\"to\":\"\\\"Foo Bar\\\" <Foo.Bar@acme.com>\"}"}
+{"level":20,"time":1780065721020,"pid":1712,"hostname":"SamHKA","file":"config/keycloak","msg":"keycloakConfig = {\"realm\":\"javascript\",\"issuer\":\"https://localhost:8843/realms/javascript\",\"jwksUri\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/certs\",\"clientId\":\"javascript-client\",\"audience\":[\"account\"],\"accessTokenUrl\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\"}"}
+{"level":20,"time":1780065721044,"pid":1712,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780065721044,"pid":1712,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780065721044,"pid":1712,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780065721050,"pid":1712,"hostname":"SamHKA","class":"DbPopulateService","msg":"dropScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/drop-table.sql"}
+{"level":20,"time":1780065721051,"pid":1712,"hostname":"SamHKA","class":"DbPopulateService","msg":"createScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/create-table.sql"}
+{"level":20,"time":1780065721051,"pid":1712,"hostname":"SamHKA","class":"DbPopulateService","msg":"copyScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/copy-csv.sql"}
+{"level":30,"time":1780065721253,"pid":1712,"hostname":"SamHKA","file":"prisma-client","msg":"Verbindung mit der DB ist hergestellt."}
+{"level":30,"time":1780065721275,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Bun: 1.3.13"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Bun / Node: v24.3.0"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"NODE_ENV: undefined"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Rechnername: SamHKA"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Port: 3000"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"HTTP-Port: 3030"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Betriebssystem: Windows_NT (10.0.26200)"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Username: samha"}
+{"level":30,"time":1780065721276,"pid":1712,"hostname":"SamHKA","func":"banner","msg":"Docker Container: false"}
+{"level":20,"time":1780065721439,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065721444,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065724430,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065724432,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065727421,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065727423,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065730435,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065730438,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065733425,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065733426,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065736439,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065736446,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 7 ms, 200"}
+{"level":20,"time":1780065739421,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065739423,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065742428,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065742431,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065745435,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065745438,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780065748423,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065748425,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065751422,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065751424,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065754435,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065754437,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780065757419,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065757420,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780065760427,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065760430,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780065763418,"pid":1712,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780065763419,"pid":1712,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066409845,"pid":24828,"hostname":"SamHKA","file":"config/mail","msg":"mailConfig = {\"activated\":true,\"options\":{\"host\":\"localhost\",\"port\":1025,\"secure\":false,\"priority\":\"normal\",\"logger\":false},\"from\":\"\\\"Joe Doe\\\" <Joe.Doe@acme.com>\",\"to\":\"\\\"Foo Bar\\\" <Foo.Bar@acme.com>\"}"}
+{"level":20,"time":1780066409846,"pid":24828,"hostname":"SamHKA","file":"config/keycloak","msg":"keycloakConfig = {\"realm\":\"javascript\",\"issuer\":\"https://localhost:8843/realms/javascript\",\"jwksUri\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/certs\",\"clientId\":\"javascript-client\",\"audience\":[\"account\"],\"accessTokenUrl\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\"}"}
+{"level":20,"time":1780066409873,"pid":24828,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780066409873,"pid":24828,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780066409874,"pid":24828,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780066409880,"pid":24828,"hostname":"SamHKA","class":"DbPopulateService","msg":"dropScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/drop-table.sql"}
+{"level":20,"time":1780066409881,"pid":24828,"hostname":"SamHKA","class":"DbPopulateService","msg":"createScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/create-table.sql"}
+{"level":20,"time":1780066409881,"pid":24828,"hostname":"SamHKA","class":"DbPopulateService","msg":"copyScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/copy-csv.sql"}
+{"level":30,"time":1780066410179,"pid":24828,"hostname":"SamHKA","file":"prisma-client","msg":"Verbindung mit der DB ist hergestellt."}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Bun: 1.3.13"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Bun / Node: v24.3.0"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"NODE_ENV: undefined"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Rechnername: SamHKA"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Port: 3000"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"HTTP-Port: 3030"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Betriebssystem: Windows_NT (10.0.26200)"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Username: samha"}
+{"level":30,"time":1780066410200,"pid":24828,"hostname":"SamHKA","func":"banner","msg":"Docker Container: false"}
+{"level":20,"time":1780066411423,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066411427,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780066414384,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066414386,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066417393,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066417395,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066420388,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066420390,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066423381,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066423382,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066426380,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066426381,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066429391,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066429394,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066432381,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066432383,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066435393,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066435396,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066438381,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066438382,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066441378,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066441379,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066442801,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=POST, url=https://samhka:3000/auth/token"}
+{"level":20,"time":1780066442802,"pid":24828,"hostname":"SamHKA","file":"auth-router","msg":"post: username=admin"}
+{"level":20,"time":1780066442803,"pid":24828,"hostname":"SamHKA","class":"KeycloakService","msg":"token: username=admin"}
+{"level":20,"time":1780066442803,"pid":24828,"hostname":"SamHKA","class":"KeycloakService","msg":"token: path=https://localhost:8843/realms/javascript/protocol/openid-connect/token"}
+{"level":20,"time":1780066442803,"pid":24828,"hostname":"SamHKA","class":"KeycloakService","msg":"token: headers={\"content-type\":\"application/x-www-form-urlencoded\"}"}
+{"level":20,"time":1780066442803,"pid":24828,"hostname":"SamHKA","class":"KeycloakService","msg":"token: body=username=admin&password=p&grant_type=password&client_id=javascript-client&client_secret=eVUYsaIew9mcK3WrFOpeeL85iCiXQSX0"}
+{"level":40,"time":1780066443000,"pid":24828,"hostname":"SamHKA","class":"KeycloakService","msg":"Fehler beim Zugriff auf Keycloak: {\"code\":\"DEPTH_ZERO_SELF_SIGNED_CERT\",\"path\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\",\"errno\":0}"}
+{"level":20,"time":1780066443000,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 199 ms, 401"}
+{"level":20,"time":1780066442716,"pid":21848,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780066442717,"pid":21848,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780066442717,"pid":21848,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780066444395,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066444397,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066447385,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066447388,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066450378,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066450379,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066453387,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066453388,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066456376,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066456377,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066459384,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066459386,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066462379,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066462381,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066465376,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066465378,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066468379,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066468381,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066471374,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066471375,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066474379,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066474380,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066477374,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066477375,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066480382,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066480385,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066483378,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066483379,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066486373,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066486374,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066489382,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066489383,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066492383,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066492385,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066495385,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066495387,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066498388,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066498391,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780066501387,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066501389,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066504388,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066504392,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 5 ms, 200"}
+{"level":20,"time":1780066507369,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066507371,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066510374,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066510376,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066513370,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066513371,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066516371,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066516372,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066519376,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066519379,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066522384,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066522388,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780066525383,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066525385,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066528367,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066528368,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066531367,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066531368,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066534380,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066534383,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066537365,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066537366,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066540366,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066540367,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066543365,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066543366,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066546377,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066546380,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066549363,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066549366,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066552368,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066552374,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066555382,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066555386,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 5 ms, 200"}
+{"level":20,"time":1780066558376,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066558380,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 4 ms, 200"}
+{"level":20,"time":1780066561364,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066561365,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066564379,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066564381,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066567379,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066567382,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066570361,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066570362,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066573362,"pid":24828,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066573363,"pid":24828,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066649319,"pid":9960,"hostname":"SamHKA","file":"config/mail","msg":"mailConfig = {\"activated\":true,\"options\":{\"host\":\"localhost\",\"port\":1025,\"secure\":false,\"priority\":\"normal\",\"logger\":false},\"from\":\"\\\"Joe Doe\\\" <Joe.Doe@acme.com>\",\"to\":\"\\\"Foo Bar\\\" <Foo.Bar@acme.com>\"}"}
+{"level":20,"time":1780066649320,"pid":9960,"hostname":"SamHKA","file":"config/keycloak","msg":"keycloakConfig = {\"realm\":\"javascript\",\"issuer\":\"https://localhost:8843/realms/javascript\",\"jwksUri\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/certs\",\"clientId\":\"javascript-client\",\"audience\":[\"account\"],\"accessTokenUrl\":\"https://localhost:8843/realms/javascript/protocol/openid-connect/token\"}"}
+{"level":20,"time":1780066649342,"pid":9960,"hostname":"SamHKA","file":"config/server","msg":"port = 3000"}
+{"level":20,"time":1780066649342,"pid":9960,"hostname":"SamHKA","file":"config/server","msg":"portHttp = 3030"}
+{"level":20,"time":1780066649342,"pid":9960,"hostname":"SamHKA","file":"config/server","msg":"tlsURL = file:///C:/Users/samha/Kiosk-TS/src/config/resources/tls/"}
+{"level":20,"time":1780066649349,"pid":9960,"hostname":"SamHKA","class":"DbPopulateService","msg":"dropScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/drop-table.sql"}
+{"level":20,"time":1780066649349,"pid":9960,"hostname":"SamHKA","class":"DbPopulateService","msg":"createScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/create-table.sql"}
+{"level":20,"time":1780066649350,"pid":9960,"hostname":"SamHKA","class":"DbPopulateService","msg":"copyScript = file:///C:/Users/samha/Kiosk-TS/src/config/resources/postgresql/copy-csv.sql"}
+{"level":30,"time":1780066649641,"pid":9960,"hostname":"SamHKA","file":"prisma-client","msg":"Verbindung mit der DB ist hergestellt."}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Bun: 1.3.13"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Bun / Node: v24.3.0"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"NODE_ENV: undefined"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Rechnername: SamHKA"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Port: 3000"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"HTTP-Port: 3030"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Betriebssystem: Windows_NT (10.0.26200)"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Username: samha"}
+{"level":30,"time":1780066649659,"pid":9960,"hostname":"SamHKA","func":"banner","msg":"Docker Container: false"}
+{"level":20,"time":1780066651373,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066651376,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066654367,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066654372,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 5 ms, 200"}
+{"level":20,"time":1780066657419,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066657422,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066660350,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066660351,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066663351,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066663352,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066666361,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066666364,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 3 ms, 200"}
+{"level":20,"time":1780066669349,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066669350,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066672348,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066672350,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066675347,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066675348,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066678348,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066678350,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066681364,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066681370,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 6 ms, 200"}
+{"level":20,"time":1780066684350,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066684351,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066687346,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066687347,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066690345,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066690346,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
+{"level":20,"time":1780066693354,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066693356,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066696344,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066696345,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 2 ms, 200"}
+{"level":20,"time":1780066699349,"pid":9960,"hostname":"SamHKA","func":"requestLogger","msg":"method=GET, url=https://host.docker.internal:3000/prometheus"}
+{"level":20,"time":1780066699350,"pid":9960,"hostname":"SamHKA","func":"responseTime","msg":"Response time: 1 ms, 200"}
