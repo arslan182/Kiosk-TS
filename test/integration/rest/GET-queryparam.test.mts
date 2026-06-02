@@ -70,7 +70,7 @@ describe('GET /rest (Query-Parameter)', () => {
         'Kioske nach bestimmten Kriterien filtern (z.B. Name)',
         async () => {
             // given
-            const suchname = 'Campus';
+            const suchname = 'Alice';
             const url = `${restURL}?name=${suchname}&page=0&size=2`;
 
             // when
