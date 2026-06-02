@@ -1,94 +1,112 @@
-# CI mit GitHub Actions in diesem Hono-Projekt
+# CI mit GitHub Actions im Kiosk-Projekt
 
-Diese Anleitung erklaert dir Schritt fuer Schritt, was CI ist und wie du fuer
-dieses Bun/Hono-Projekt einen einfachen CI-Workflow mit GitHub Actions
-einrichten kannst.
+Diese Anleitung erklaert kurz, wie die GitHub-Actions-CI in diesem Projekt funktioniert und wie man sie startet.
 
-Du musst dafuer noch kein DevOps-Vorwissen haben.
+## Was macht die CI?
 
-## Was ist CI?
+CI steht fuer Continuous Integration. In diesem Projekt bedeutet das: GitHub prueft automatisch, ob der aktuelle Code noch sauber ist.
 
-CI steht fuer **Continuous Integration**. Auf Deutsch bedeutet das ungefaehr:
-Code wird regelmaessig automatisch geprueft.
-
-Typischer Ablauf:
-
-1. Du aenderst Code in deinem Projekt.
-2. Du speicherst die Aenderungen mit Git in einem Commit.
-3. Du pushst den Commit zu GitHub.
-4. GitHub startet automatisch Pruefungen.
-5. GitHub zeigt dir, ob alles bestanden wurde.
-
-Wenn alles passt, ist der CI-Lauf **gruen**. Wenn etwas fehlschlaegt, ist der
-CI-Lauf **rot**. Dann klickst du in GitHub auf den fehlgeschlagenen Lauf und
-schaust dir die Fehlermeldung an.
-
-CI ersetzt nicht dein eigenes Verstehen des Codes, aber CI hilft dir dabei,
-Fehler frueh zu finden.
-
-## Was ist GitHub Actions?
-
-**GitHub Actions** ist das Automatisierungssystem von GitHub.
-
-Damit kannst du GitHub sagen:
-
-> Immer wenn jemand Code pusht oder einen Pull Request erstellt, fuehre diese
-> Befehle aus.
-
-Diese Befehle stehen in einer Workflow-Datei. Eine Workflow-Datei ist eine
-YAML-Datei und liegt normalerweise hier:
+Der Workflow liegt hier:
 
 ```text
 .github/workflows/ci.yml
 ```
 
-GitHub erkennt diese Datei automatisch.
-
-## Was soll CI in diesem Projekt pruefen?
-
-Dieses Projekt verwendet laut `package.json` **Bun** als Package Manager und
-Runtime. Deshalb installiert der Workflow Bun und fuehrt danach die passenden
-Befehle aus.
-
-Wichtig: In diesem Projekt solltest du fuer die Tests nicht einfach
-`bun test` verwenden. Laut `ReadMe.md` werden die Tests mit **Vitest**
-ausgefuehrt. Deshalb verwenden wir fuer Unit-Tests:
+Er fuehrt diese Schritte aus:
 
 ```shell
+bun install --frozen-lockfile
+bun run prettier:check
+bun run eslint
+bun run tsc
 bun vitest --project unit
 ```
 
-Fuer den ersten einfachen CI-Workflow pruefen wir nur Dinge, die ohne
-zusaetzliche Server laufen:
+Damit wird geprueft:
 
-- Abhaengigkeiten installieren
-- Formatierung pruefen
-- Linter ausfuehren
-- TypeScript pruefen
-- Unit-Tests ausfuehren
+- ob sich die Abhaengigkeiten sauber installieren lassen
+- ob die Formatierung passt
+- ob ESLint Fehler findet
+- ob TypeScript kompiliert
+- ob die Unit-Tests laufen
 
-Die Integrationstests werden hier bewusst noch nicht ausgefuehrt, weil sie laut
-`ReadMe.md` laufende Infrastruktur brauchen, zum Beispiel Appserver, Datenbank
-und Mailserver.
+Integrationstests und Docker Compose sind bewusst noch nicht Teil dieser einfachen CI, weil sie laufende Infrastruktur wie Appserver, DB und Mailserver brauchen.
 
-## Beispiel fuer `.github/workflows/ci.yml`
+## Wie startet GitHub Actions CI?
 
-Erstelle in deinem Projekt diese Datei:
+Die CI startet automatisch, sobald die Datei `.github/workflows/ci.yml` auf GitHub liegt.
 
-```text
-.github/workflows/ci.yml
+In diesem Projekt startet sie bei:
+
+- `git push origin Fixing`
+- `git push origin main`
+- Pull Requests gegen `main`
+
+Man kann sie auch manuell starten:
+
+1. Repository auf GitHub oeffnen.
+2. Oben auf **Actions** klicken.
+3. Links den Workflow **CI** auswaehlen.
+4. Rechts auf **Run workflow** klicken.
+5. Branch auswaehlen, zum Beispiel `Fixing`.
+6. Start bestaetigen.
+
+Wichtig: Beim allerersten Mal erscheint der Workflow in GitHub erst, nachdem `.github/workflows/ci.yml` gepusht wurde.
+
+## Was bedeutet gruen oder rot?
+
+Gruen bedeutet: Alle CI-Schritte waren erfolgreich.
+
+Rot bedeutet: Mindestens ein Schritt ist fehlgeschlagen. Dann in GitHub auf den roten Lauf klicken und den fehlgeschlagenen Schritt oeffnen. Dort steht die konkrete Fehlermeldung.
+
+Typische Ursachen:
+
+- `bun install --frozen-lockfile`: `package.json` und `bun.lock` passen nicht zusammen.
+- `bun run prettier:check`: Code ist nicht richtig formatiert.
+- `bun run eslint`: ESLint findet Codeprobleme.
+- `bun run tsc`: TypeScript findet Typfehler.
+- `bun vitest --project unit`: Ein Unit-Test schlaegt fehl.
+
+## Sicherer Branch-Ablauf
+
+Fuer dieses Projekt ist der sichere Ablauf:
+
+1. Auf `Fixing` arbeiten.
+2. Lokal pruefen:
+
+```shell
+bun run prettier:check
+bun run eslint
+bun run tsc
+bun vitest --project unit
 ```
 
-Der Inhalt kann so aussehen:
+3. `Fixing` pushen:
+
+```shell
+git push origin Fixing
+```
+
+4. GitHub Actions auf `Fixing` abwarten.
+5. Nur wenn CI gruen ist, nach `main` mergen.
+6. Danach `main` pushen und wieder CI abwarten.
+7. Erst danach den alten `Fixing`-Branch loeschen.
+
+Kein Force-Push verwenden.
+
+## Aktueller Workflow
+
+Der aktuelle Workflow verwendet Bun `1.3.13`, passend zu `package.json`:
 
 ```yaml
 name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [Fixing, main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -99,21 +117,21 @@ jobs:
 
     steps:
       - name: Repository herunterladen
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Bun installieren
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.3.14
+          bun-version: 1.3.13
 
       - name: Abhaengigkeiten installieren
         run: bun install --frozen-lockfile
 
       - name: Formatierung pruefen
-        run: bun run fmt:check
+        run: bun run prettier:check
 
-      - name: Linter ausfuehren
-        run: bun run lint
+      - name: ESLint ausfuehren
+        run: bun run eslint
 
       - name: TypeScript pruefen
         run: bun run tsc
@@ -122,205 +140,9 @@ jobs:
         run: bun vitest --project unit
 ```
 
-## Was bedeuten die wichtigsten Teile?
-
-```yaml
-name: CI
-```
-
-Das ist der Name, den du spaeter in GitHub unter **Actions** siehst.
-
-```yaml
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-```
-
-Damit startet GitHub den Workflow bei einem `push` auf den Branch `main` und
-bei einem Pull Request gegen `main`.
-
-```yaml
-permissions:
-  contents: read
-```
-
-Der Workflow darf den Repository-Inhalt lesen. Mehr Rechte braucht dieser
-einfache CI-Workflow nicht.
-
-```yaml
-runs-on: ubuntu-latest
-```
-
-GitHub startet eine frische Linux-Umgebung fuer den Job. Dort werden die
-Befehle ausgefuehrt.
-
-```yaml
-uses: actions/checkout@v5
-```
-
-Dieser Schritt laedt deinen Repository-Code in die GitHub-Actions-Umgebung.
-Ohne diesen Schritt haette der Workflow deinen Code nicht lokal verfuegbar.
-
-```yaml
-uses: oven-sh/setup-bun@v2
-```
-
-Dieser Schritt installiert Bun in der GitHub-Actions-Umgebung.
-
-```yaml
-bun-version: 1.3.14
-```
-
-Das passt zur Version aus `package.json`.
-
-## Was machen die Befehle?
-
-```shell
-bun install --frozen-lockfile
-```
-
-Installiert die Abhaengigkeiten. `--frozen-lockfile` bedeutet: Die Datei
-`bun.lock` darf dabei nicht automatisch veraendert werden. Das ist in CI gut,
-weil CI reproduzierbar sein soll.
-
-```shell
-bun run fmt:check
-```
-
-Prueft die Formatierung mit `oxfmt`. Der Befehl aendert nichts, sondern meldet
-nur, ob etwas falsch formatiert ist.
-
-```shell
-bun run lint
-```
-
-Fuehrt `oxlint` aus. Der Linter sucht nach Codeproblemen und Regelverstoessen.
-
-```shell
-bun run tsc
-```
-
-Fuehrt die TypeScript-Pruefung aus. Dadurch werden Typfehler gefunden.
-
-```shell
-bun vitest --project unit
-```
-
-Fuehrt nur die Unit-Tests aus. Das ist fuer den ersten CI-Workflow sinnvoll,
-weil diese Tests ohne gestartete Datenbank, Mailserver oder Appserver laufen
-sollen.
-
-## Schritt fuer Schritt einrichten
-
-1. Erstelle im Projektroot den Ordner `.github`.
-2. Erstelle darin den Ordner `workflows`.
-3. Erstelle darin die Datei `ci.yml`.
-4. Fuege den YAML-Inhalt aus dem Beispiel oben ein.
-5. Committe die Aenderung mit Git.
-6. Pushe die Aenderung zu GitHub.
-7. Oeffne dein Repository auf GitHub.
-8. Klicke oben auf **Actions**.
-9. Waehle den Workflow **CI** aus.
-10. Pruefe, ob der Lauf gruen oder rot ist.
-
-Wenn der Lauf gruen ist, wurden alle Schritte erfolgreich ausgefuehrt.
-
-Wenn der Lauf rot ist, klicke auf den fehlgeschlagenen Job und dann auf den
-fehlgeschlagenen Schritt. Dort findest du die genaue Fehlermeldung.
-
-## Typische Fehler und was sie bedeuten
-
-### `bun install --frozen-lockfile` schlaegt fehl
-
-Dann passt meistens `package.json` nicht zu `bun.lock`.
-
-Loesung:
-
-1. Lokal `bun install` ausfuehren.
-2. Pruefen, ob sich `bun.lock` geaendert hat.
-3. `bun.lock` mit committen.
-
-### `bun run fmt:check` schlaegt fehl
-
-Dann ist Code nicht so formatiert, wie `oxfmt` es erwartet.
-
-Loesung:
-
-```shell
-bun run fmt
-```
-
-Danach die geaenderten Dateien committen.
-
-### `bun run lint` schlaegt fehl
-
-Dann hat `oxlint` ein Codeproblem gefunden.
-
-Loesung:
-
-1. Fehlermeldung lesen.
-2. Die genannte Datei oeffnen.
-3. Die genannte Stelle korrigieren.
-4. Den Linter lokal erneut ausfuehren.
-
-```shell
-bun run lint
-```
-
-### `bun run tsc` schlaegt fehl
-
-Dann gibt es mindestens einen TypeScript-Fehler.
-
-Loesung:
-
-1. Fehlermeldung lesen.
-2. Datei und Zeile aus der Meldung oeffnen.
-3. Typfehler korrigieren.
-4. Lokal erneut pruefen.
-
-```shell
-bun run tsc
-```
-
-### `bun vitest --project unit` schlaegt fehl
-
-Dann ist ein Unit-Test fehlgeschlagen.
-
-Loesung:
-
-1. In der Fehlermeldung schauen, welcher Test rot ist.
-2. Pruefen, ob der Test falsch ist oder der Code wirklich kaputt ist.
-3. Code oder Test korrigieren.
-4. Lokal erneut ausfuehren.
-
-```shell
-bun vitest --project unit
-```
-
-## Warum noch keine Integrationstests?
-
-Dieses Projekt hat auch Integrationstests. Diese Tests pruefen groessere
-Zusammenhaenge, zum Beispiel REST- oder GraphQL-Endpunkte.
-
-Laut `ReadMe.md` brauchen diese Tests aber laufende Infrastruktur:
-
-- DB-Server
-- Mailserver
-- Appserver
-
-Das kann man spaeter auch in GitHub Actions einrichten, zum Beispiel mit Docker
-Compose oder GitHub-Actions-Services. Fuer den Anfang ist es aber einfacher und
-stabiler, zuerst nur Formatierung, Linting, TypeScript und Unit-Tests in CI
-auszufuehren.
-
 ## Nuetzliche Links
 
-- GitHub Actions Workflow Syntax:
-  <https://docs.github.com/actions/learn-github-actions/workflow-syntax-for-github-actions>
-- Bun CI/CD Guide:
-  <https://bun.com/guides/install/cicd>
-- Bun install Dokumentation:
-  <https://bun.com/docs/cli/install>
-
+- GitHub Actions: <https://docs.github.com/actions>
+- Workflow-Syntax: <https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions>
+- Bun in GitHub Actions: <https://bun.com/guides/runtime/cicd>
+- setup-bun Action: <https://github.com/oven-sh/setup-bun>
