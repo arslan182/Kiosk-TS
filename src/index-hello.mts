@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-import Bun from 'bun';
+import { serve } from 'bun';
 import { Hono } from 'hono';
 
 /**
@@ -27,6 +27,6 @@ app.get('/', (c) => c.json({ msg: 'Hello World' }));
 // fetch: Request-Handler fuer den Bun-Server mit Signatur gemaess Fetch-API von ES2015
 // d.h. eine Funktion, die einen Request empfaengt und einen Response produziert:
 // async function handler(req: Request): Promise<Response> { ... }
-Bun.serve({ port: 3000, fetch: app.fetch });
+serve({ port: 3000, fetch: app.fetch });
 
 console.log('Der Server http://localhost:3000 ist gestartet');

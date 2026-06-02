@@ -20,64 +20,83 @@ import { ACCEPT, APPLICATION_JSON, restURL } from '../constants.mts';
 // T e s t s
 // -----------------------------------------------------------------------------
 describe('GET /rest (Query-Parameter)', () => {
-    test.concurrent('Kioske mit Paginierung auflisten (Erfolgsfall)', async () => {
-        // given
-        const url = `${restURL}?page=0&size=5`;
+    test.concurrent(
+        'Kioske mit Paginierung auflisten (Erfolgsfall)',
+        async () => {
+            // given
+            const url = `${restURL}?page=0&size=5`;
 
-        // when
-        const response = await fetch(url);
+            // when
+            const response = await fetch(url);
 
-        // then
-        expect(response.status).toBe(200);
-        expect(response.headers.get('Content-Type')).toContain(APPLICATION_JSON);
+            // then
+            expect(response.status).toBe(200);
+            expect(response.headers.get('Content-Type')).toContain(
+                APPLICATION_JSON,
+            );
 
-        const body = await response.json();
-        // createPage liefert laut Vorlage ein Objekt mit Metadaten (z.B. page-Objekt) und Daten
-        expect(body).toBeInstanceOf(Object);
-        expect(body.kioske || body._embedded || body).toBeDefined();
-    });
+            const body = (await response.json()) as {
+                kioske?: unknown;
+                _embedded?: unknown;
+            };
+            // createPage liefert laut Vorlage ein Objekt mit Metadaten (z.B. page-Objekt) und Daten
+            expect(body).toBeInstanceOf(Object);
+            expect(body.kioske || body._embedded || body).toBeDefined();
+        },
+    );
 
-    test.concurrent('Nur die Anzahl aller Kioske abfragen (count-only)', async () => {
-        // given
-        const url = `${restURL}?count-only=true`;
+    test.concurrent(
+        'Nur die Anzahl aller Kioske abfragen (count-only)',
+        async () => {
+            // given
+            const url = `${restURL}?count-only=true`;
 
-        // when
-        const response = await fetch(url);
+            // when
+            const response = await fetch(url);
 
-        // then
-        expect(response.status).toBe(200);
-        expect(response.headers.get('Content-Type')).toContain(APPLICATION_JSON);
+            // then
+            expect(response.status).toBe(200);
+            expect(response.headers.get('Content-Type')).toContain(
+                APPLICATION_JSON,
+            );
 
-        const body = await response.json();
-        expect(body).toHaveProperty('count');
-        expect(typeof body.count).toBe('number');
-    });
+            const body = (await response.json()) as { count: unknown };
+            expect(body).toHaveProperty('count');
+            expect(typeof body.count).toBe('number');
+        },
+    );
 
-    test.concurrent('Kioske nach bestimmten Kriterien filtern (z.B. Name)', async () => {
-        // given
-        const suchname = 'Campus';
-        const url = `${restURL}?name=${suchname}&page=0&size=2`;
+    test.concurrent(
+        'Kioske nach bestimmten Kriterien filtern (z.B. Name)',
+        async () => {
+            // given
+            const suchname = 'Campus';
+            const url = `${restURL}?name=${suchname}&page=0&size=2`;
 
-        // when
-        const response = await fetch(url);
+            // when
+            const response = await fetch(url);
 
-        // then
-        expect(response.status).toBe(200);
-        const body = await response.json();
-        expect(body).toBeDefined();
-    });
+            // then
+            expect(response.status).toBe(200);
+            const body = await response.json();
+            expect(body).toBeDefined();
+        },
+    );
 
-    test.concurrent('Kiosk-Suche mit falschem Accept-Header abweisen (406)', async () => {
-        // given
-        const url = `${restURL}?page=0&size=1`;
-        const headers = new Headers();
-        // Laut deinem Router-Regex fliegt alles außer json/html raus
-        headers.append(ACCEPT, 'text/plain');
+    test.concurrent(
+        'Kiosk-Suche mit falschem Accept-Header abweisen (406)',
+        async () => {
+            // given
+            const url = `${restURL}?page=0&size=1`;
+            const headers = new Headers();
+            // Laut deinem Router-Regex fliegt alles außer json/html raus
+            headers.append(ACCEPT, 'text/plain');
 
-        // when
-        const response = await fetch(url, { headers });
+            // when
+            const response = await fetch(url, { headers });
 
-        // then
-        expect(response.status).toBe(406);
-    });
+            // then
+            expect(response.status).toBe(406);
+        },
+    );
 });

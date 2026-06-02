@@ -94,10 +94,7 @@ export class KeycloakService {
             return;
         }
 
-        const responseBody = (await response.json()) as Record<
-            string,
-            unknown
-        >;
+        const responseBody = (await response.json()) as Record<string, unknown>;
         this.#logPayload(responseBody);
         this.#logger.debug('token: responseBody=%o', responseBody);
         return responseBody;

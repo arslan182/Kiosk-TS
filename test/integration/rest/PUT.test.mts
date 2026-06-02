@@ -49,11 +49,11 @@ const geaendertKioskIdNichtVorhanden: KioskUpdateType = {
 const idNichtVorhanden = '999999';
 
 const geaendertKioskInvalid: Record<string, unknown> = {
-    name: '?!',               // Ungültiges Format laut Zod-Schema
-    email: 'keine-email',     // Falsches E-Mail-Format
+    name: '?!', // Ungültiges Format laut Zod-Schema
+    email: 'keine-email', // Falsches E-Mail-Format
     istGeoeffnet: 'geschlossen', // Sollte ein Boolean sein
-    homepage: 'invalid-url',  // Keine korrekte URL-Struktur
-    username: '',             // Darf nicht leer sein
+    homepage: 'invalid-url', // Keine korrekte URL-Struktur
+    username: '', // Darf nicht leer sein
 };
 
 const veralteterKiosk: KioskUpdateType = {
@@ -119,7 +119,7 @@ describe('PUT /rest/:id', () => {
         headers.append(CONTENT_TYPE, APPLICATION_JSON);
         headers.append(IF_MATCH, '"0"');
         headers.append(AUTHORIZATION, `${BEARER} ${token}`);
-        
+
         const expectedPaths = [
             'name',
             'email',
@@ -202,4 +202,17 @@ describe('PUT /rest/:id', () => {
         // given
         const url = `${restURL}/${idVorhanden}`;
         const headers = new Headers();
-        headers.append(
+        headers.append(CONTENT_TYPE, APPLICATION_JSON);
+        headers.append(IF_MATCH, '"0"');
+
+        // when
+        const response = await fetch(url, {
+            method: PUT,
+            body: JSON.stringify(geaendertKiosk),
+            headers,
+        });
+
+        // then
+        expect(response.status).toBe(401);
+    });
+});

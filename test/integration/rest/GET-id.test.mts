@@ -37,33 +37,46 @@ describe('GET /rest/:id', () => {
 
         // then
         expect(response.status).toBe(200);
-        expect(response.headers.get('Content-Type')).toContain(APPLICATION_JSON);
-        
-        const body = await response.json();
+        expect(response.headers.get('Content-Type')).toContain(
+            APPLICATION_JSON,
+        );
+
+        const body = (await response.json()) as {
+            id: number;
+            name?: unknown;
+            email?: unknown;
+            istGeoeffnet?: unknown;
+        };
         expect(body).toBeInstanceOf(Object);
         expect(body.id).toBe(Number.parseInt(idVorhanden, 10));
-        
+
         // Verfiziert die Kiosk-Struktur aus deinem Router
         expect(body.name).toBeDefined();
         expect(body.email).toBeDefined();
         expect(body.istGeoeffnet).toBeDefined();
     });
 
-    test.concurrent('Kiosk nach ID suchen mit ETag (304 Not Modified)', async () => {
-        // given
-        const url = `${restURL}/${idVorhanden}`;
-        const initialResponse = await fetch(url);
-        const etag = initialResponse.headers.get('ETag');
-        expect(etag).toBeDefined();
+    test.concurrent(
+        'Kiosk nach ID suchen mit ETag (304 Not Modified)',
+        async () => {
+            // given
+            const url = `${restURL}/${idVorhanden}`;
+            const initialResponse = await fetch(url);
+            const etag = initialResponse.headers.get('ETag');
+            expect(etag).not.toBeNull();
+            if (etag === null) {
+                throw new Error('ETag fehlt');
+            }
 
-        // when
-        const response = await fetch(url, {
-            headers: { 'If-None-Match': etag! },
-        });
+            // when
+            const response = await fetch(url, {
+                headers: { 'If-None-Match': etag },
+            });
 
-        // then
-        expect(response.status).toBe(304);
-    });
+            // then
+            expect(response.status).toBe(304);
+        },
+    );
 
     test.concurrent('Kiosk nach nicht-existenter ID suchen (404)', async () => {
         // given
@@ -76,17 +89,20 @@ describe('GET /rest/:id', () => {
         expect(response.status).toBe(404);
     });
 
-    test.concurrent('Kiosk nach ID suchen mit falschem Accept-Header (406)', async () => {
-        // given
-        const url = `${restURL}/${idVorhanden}`;
-        const headers = new Headers();
-        // Router erlaubt laut Regex nur json oder html, XML fliegt raus
-        headers.append(ACCEPT, 'text/xml'); 
+    test.concurrent(
+        'Kiosk nach ID suchen mit falschem Accept-Header (406)',
+        async () => {
+            // given
+            const url = `${restURL}/${idVorhanden}`;
+            const headers = new Headers();
+            // Router erlaubt laut Regex nur json oder html, XML fliegt raus
+            headers.append(ACCEPT, 'text/xml');
 
-        // when
-        const response = await fetch(url, { headers });
+            // when
+            const response = await fetch(url, { headers });
 
-        // then
-        expect(response.status).toBe(406);
-    });
+            // then
+            expect(response.status).toBe(406);
+        },
+    );
 });

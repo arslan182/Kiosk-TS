@@ -43,24 +43,24 @@ const neuerKiosk: KioskNeuType = {
         {
             vorname: 'Max',
             nachname: 'Mustermann',
-            geschlecht: 'MALE',
+            geschlecht: 'MAENNLICH',
         },
     ],
     produkt: [
         {
             name: 'Kaffee',
-            preis: 2.50,
+            preis: 2.5,
             waehrung: 'EUR',
         },
     ],
 };
 
 const neuerKioskInvalid: Record<string, unknown> = {
-    name: '?!',              // Zu kurz / Ungültige Zeichen laut Schema
-    email: 'falsche-email',   // Kein valides E-Mail-Format
-    istGeoeffnet: 'ja',       // Sollte boolean sein
-    homepage: 'keine-url',    // Keine valide URL
-    username: '',             // Darf nicht leer sein
+    name: '?!', // Zu kurz / Ungültige Zeichen laut Schema
+    email: 'falsche-email', // Kein valides E-Mail-Format
+    istGeoeffnet: 'ja', // Sollte boolean sein
+    homepage: 'keine-url', // Keine valide URL
+    username: '', // Darf nicht leer sein
 };
 
 const neuerKioskEmailExistiert: KioskNeuType = {

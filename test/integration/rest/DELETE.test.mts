@@ -52,47 +52,56 @@ describe('DELETE /rest/:id', () => {
         expect(response.status).toBe(204);
     });
 
-    test.concurrent('Kiosk loeschen schlaegt fehl ohne Token (401)', async () => {
-        // given
-        const url = `${restURL}/${id}`;
+    test.concurrent(
+        'Kiosk loeschen schlaegt fehl ohne Token (401)',
+        async () => {
+            // given
+            const url = `${restURL}/${id}`;
 
-        // when
-        const response = await fetch(url, { method: DELETE });
+            // when
+            const response = await fetch(url, { method: DELETE });
 
-        // then
-        expect(response.status).toBe(401);
-    });
+            // then
+            expect(response.status).toBe(401);
+        },
+    );
 
-    test.concurrent('Kiosk loeschen schlaegt fehl mit falschem Token (401)', async () => {
-        // given
-        const url = `${restURL}/${id}`;
-        const headers = new Headers();
-        headers.append(AUTHORIZATION, `${BEARER} UNGUELTIGER_TOKEN_XYZ`);
+    test.concurrent(
+        'Kiosk loeschen schlaegt fehl mit falschem Token (401)',
+        async () => {
+            // given
+            const url = `${restURL}/${id}`;
+            const headers = new Headers();
+            headers.append(AUTHORIZATION, `${BEARER} UNGUELTIGER_TOKEN_XYZ`);
 
-        // when
-        const response = await fetch(url, {
-            method: DELETE,
-            headers,
-        });
+            // when
+            const response = await fetch(url, {
+                method: DELETE,
+                headers,
+            });
 
-        // then
-        expect(response.status).toBe(401);
-    });
+            // then
+            expect(response.status).toBe(401);
+        },
+    );
 
-    test.concurrent('Kiosk loeschen als normaler "user" verboten (403)', async () => {
-        // given
-        // Wir nehmen eine andere ID, falls ID 50 im ersten Test bereits gelöscht wurde
-        const url = `${restURL}/60`; 
-        const headers = new Headers();
-        headers.append(AUTHORIZATION, `${BEARER} ${tokenUser}`);
+    test.concurrent(
+        'Kiosk loeschen als normaler "user" verboten (403)',
+        async () => {
+            // given
+            // Wir nehmen eine andere ID, falls ID 50 im ersten Test bereits gelöscht wurde
+            const url = `${restURL}/60`;
+            const headers = new Headers();
+            headers.append(AUTHORIZATION, `${BEARER} ${tokenUser}`);
 
-        // when
-        const response = await fetch(url, {
-            method: DELETE,
-            headers,
-        });
+            // when
+            const response = await fetch(url, {
+                method: DELETE,
+                headers,
+            });
 
-        // then
-        expect(response.status).toBe(403);
-    });
+            // then
+            expect(response.status).toBe(403);
+        },
+    );
 });
