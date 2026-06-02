@@ -40,7 +40,6 @@ Die CI startet automatisch, sobald die Datei `.github/workflows/ci.yml` auf GitH
 
 In diesem Projekt startet sie bei:
 
-- `git push origin Fixing`
 - `git push origin main`
 - Pull Requests gegen `main`
 
@@ -50,7 +49,7 @@ Man kann sie auch manuell starten:
 2. Oben auf **Actions** klicken.
 3. Links den Workflow **CI** auswaehlen.
 4. Rechts auf **Run workflow** klicken.
-5. Branch auswaehlen, zum Beispiel `Fixing`.
+5. Branch `main` auswaehlen.
 6. Start bestaetigen.
 
 Wichtig: Beim allerersten Mal erscheint der Workflow in GitHub erst, nachdem `.github/workflows/ci.yml` gepusht wurde.
@@ -73,7 +72,7 @@ Typische Ursachen:
 
 Fuer dieses Projekt ist der sichere Ablauf:
 
-1. Auf `Fixing` arbeiten.
+1. Auf einem Arbeitsbranch entwickeln.
 2. Lokal pruefen:
 
 ```shell
@@ -83,29 +82,25 @@ bun run tsc
 bun vitest --project unit
 ```
 
-3. `Fixing` pushen:
-
-```shell
-git push origin Fixing
-```
-
-4. GitHub Actions auf `Fixing` abwarten.
+3. Einen Pull Request gegen `main` erstellen.
+4. GitHub Actions im Pull Request abwarten.
 5. Nur wenn CI gruen ist, nach `main` mergen.
-6. Danach `main` pushen und wieder CI abwarten.
-7. Erst danach den alten `Fixing`-Branch loeschen.
+6. Nach dem Merge pruefen, ob CI auf `main` ebenfalls gruen ist.
 
 Kein Force-Push verwenden.
 
+Der Branch `test_fix` ist nicht Teil dieser CI-Aktualisierung und wird nicht automatisch gemerged.
+
 ## Aktueller Workflow
 
-Der aktuelle Workflow verwendet Bun `1.3.13`, passend zu `package.json`:
+Der aktuelle Workflow verwendet Bun aus `package.json`. Dadurch muss die Bun-Version nur an einer Stelle gepflegt werden.
 
 ```yaml
 name: CI
 
 on:
   push:
-    branches: [Fixing, main]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -116,6 +111,7 @@ permissions:
 jobs:
   quality:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Repository herunterladen
@@ -124,7 +120,7 @@ jobs:
       - name: Bun installieren
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.3.13
+          bun-version-file: package.json
 
       - name: CI-Konfiguration erstellen
         run: |
@@ -173,4 +169,4 @@ jobs:
 - GitHub Actions: <https://docs.github.com/actions>
 - Workflow-Syntax: <https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions>
 - Bun in GitHub Actions: <https://bun.com/guides/runtime/cicd>
-- setup-bun Action: <https://github.com/oven-sh/setup-bun>
+- setup-bun Action: <https://github.com/marketplace/actions/setup-bun>
