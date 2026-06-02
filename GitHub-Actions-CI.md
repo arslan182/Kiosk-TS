@@ -32,6 +32,8 @@ Damit wird geprueft:
 
 Integrationstests und Docker Compose sind bewusst noch nicht Teil dieser einfachen CI, weil sie laufende Infrastruktur wie Appserver, DB und Mailserver brauchen.
 
+Die lokale Datei `src/config/resources/app.toml` wird weiterhin nicht ins Repository gepusht. GitHub Actions erzeugt im Schritt `CI-Konfiguration erstellen` nur fuer den CI-Runner eine minimale temporaere `app.toml`, damit die Unit-Tests auf GitHub denselben Grundaufbau wie lokal finden.
+
 ## Wie startet GitHub Actions CI?
 
 Die CI startet automatisch, sobald die Datei `.github/workflows/ci.yml` auf GitHub liegt.
@@ -123,6 +125,32 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.3.13
+
+      - name: CI-Konfiguration erstellen
+        run: |
+          mkdir -p src/config/resources
+          cat > src/config/resources/app.toml <<'EOF'
+          [server]
+          port = 3000
+          portHttp = 3030
+
+          [db]
+          populate = true
+
+          [mail]
+          host = "localhost"
+          port = 1025
+          log = false
+
+          [keycloak]
+          host = "localhost"
+          port = 8843
+
+          [log]
+          dir = "./log"
+          level = "debug"
+          pretty = true
+          EOF
 
       - name: Abhaengigkeiten installieren
         run: bun install --frozen-lockfile
