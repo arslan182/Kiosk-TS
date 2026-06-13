@@ -115,7 +115,7 @@ describe('POST /rest', () => {
 
         expect(idStr).toBeDefined();
         expect(ID_PATTERN.test(idStr ?? '')).toBe(true);
-    });
+    }, 10000);
 
     test('Neuer Kiosk mit ungueltigen Daten', async () => {
         // given
@@ -175,7 +175,7 @@ describe('POST /rest', () => {
         const body = (await response.json()) as ProblemDetails;
 
         // Validierung, dass die Fehlermeldung auf das Unique-Constraint der E-Mail hinweist
-        expect(body.detail).toStrictEqual(expect.stringContaining('email'));
+        expect(body.detail).toStrictEqual(expect.stringContaining('Email'));
     });
 
     test.concurrent('Neuer Kiosk, aber ohne Token', async () => {

@@ -15,6 +15,24 @@ config:
       bypassProxy: ""
 
 request:
+  auth:
+    type: oauth2
+    flow: resource_owner_password_credentials
+    accessTokenUrl: "{{oidcTokenUrl}}"
+    credentials:
+      clientId: javascript-client
+      clientSecret: z0pxtV2YXwRjxmDm2PosKGtzsMMwn7FE
+      placement: body
+    resourceOwner:
+      username: admin
+      password: p
+    tokenConfig:
+      id: credentials
+      placement:
+        header: Bearer
+    settings:
+      autoFetchToken: true
+      autoRefreshToken: false
   variables:
     - name: baseUrl
       value: https://localhost:3000
@@ -38,8 +56,4 @@ request:
       value: http://localhost:8880
       disabled: true
 bundled: false
-extensions:
-  bruno:
-    ignore:
-      - node_modules
-      - .git
+extensions: {}

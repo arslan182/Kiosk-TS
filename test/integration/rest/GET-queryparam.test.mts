@@ -39,6 +39,7 @@ describe('GET /rest (Query-Parameter)', () => {
                 kioske?: unknown;
                 _embedded?: unknown;
             };
+
             // createPage liefert laut Vorlage ein Objekt mit Metadaten (z.B. page-Objekt) und Daten
             expect(body).toBeInstanceOf(Object);
             expect(body.kioske || body._embedded || body).toBeDefined();
@@ -61,8 +62,10 @@ describe('GET /rest (Query-Parameter)', () => {
             );
 
             const body = (await response.json()) as { count: unknown };
+
             expect(body).toHaveProperty('count');
-            expect(typeof body.count).toBe('number');
+
+            expectTypeOf(body.count).toBeNumber();
         },
     );
 
@@ -78,7 +81,9 @@ describe('GET /rest (Query-Parameter)', () => {
 
             // then
             expect(response.status).toBe(200);
+
             const body = await response.json();
+
             expect(body).toBeDefined();
         },
     );

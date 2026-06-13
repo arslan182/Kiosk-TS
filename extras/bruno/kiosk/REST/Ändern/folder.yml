@@ -1,7 +1,7 @@
 info:
   name: Ändern
   type: folder
-  seq: 8
+  seq: 1
 
 request:
   auth:
@@ -9,12 +9,12 @@ request:
     flow: resource_owner_password_credentials
     accessTokenUrl: "{{oidcTokenUrl}}"
     credentials:
-      clientId: "{{clientId}}"
-      clientSecret: "{{clientSecret}}"
+      clientId: javascript-client
+      clientSecret: z0pxtV2YXwRjxmDm2PosKGtzsMMwn7FE
       placement: body
     resourceOwner:
-      username: "{{username}}"
-      password: "{{password}}"
+      username: admin
+      password: p
     tokenConfig:
       id: credentials
       placement:

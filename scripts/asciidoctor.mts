@@ -36,12 +36,12 @@ kroki.register(adoc.Extensions);
 
 const options = {
     safe: 'safe',
-    attributes: { linkcss: true },
-    base_dir: 'extras/doc',
+    attributes: { linkcss: true, 'kroki-server-url': 'http://localhost:8000', },
+    base_dir: 'extras/doc/projekthandbuch',
     to_dir: 'html',
     mkdirs: true,
 };
-adoc.convertFile(join('extras', 'doc', 'projekthandbuch.adoc'), options);
+adoc.convertFile(join('extras', 'doc', 'projekthandbuch', 'projekthandbuch.adoc'), options);
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 console.log(

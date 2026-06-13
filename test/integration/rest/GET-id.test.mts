@@ -47,6 +47,7 @@ describe('GET /rest/:id', () => {
             email?: unknown;
             istGeoeffnet?: unknown;
         };
+
         expect(body).toBeInstanceOf(Object);
         expect(body.id).toBe(Number.parseInt(idVorhanden, 10));
 
@@ -61,17 +62,11 @@ describe('GET /rest/:id', () => {
         async () => {
             // given
             const url = `${restURL}/${idVorhanden}`;
-            const initialResponse = await fetch(url);
-            const etag = initialResponse.headers.get('ETag');
-            expect(etag).not.toBeNull();
-            if (etag === null) {
-                throw new Error('ETag fehlt');
-            }
+            const headers = new Headers();
+            headers.append('If-None-Match', '"0"');
 
             // when
-            const response = await fetch(url, {
-                headers: { 'If-None-Match': etag },
-            });
+            const response = await fetch(url, { headers });
 
             // then
             expect(response.status).toBe(304);

@@ -110,6 +110,11 @@ services:
           cpus: "0.5"
           memory: 512M
 
+
+
+
+
 networks:
   acme-network:
     name: acme-network
+
